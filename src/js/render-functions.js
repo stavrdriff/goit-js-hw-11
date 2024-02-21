@@ -39,8 +39,6 @@ export const markupGalery = (data) => {
 
   const galleryItems = [];
 
-  toggleLoader(false);
-
   data.hits.slice(0, 9).map((item) => {
     const markup = `<li class="gallery__item">
       <div class="gallery-card">
@@ -58,6 +56,8 @@ export const markupGalery = (data) => {
 
     galleryItems.push(markup);
   });
+
+  toggleLoader(false);
 
   gallery.insertAdjacentHTML('beforeend', galleryItems.join(''));
 
