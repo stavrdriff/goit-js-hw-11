@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-primary);
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--text-color-primary);
+  font-weight: var(--font-weight-primary);
+  font-size: var(--font-size-primary);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-primary);
+  background-color: var(--body-background);
+  letter-spacing: var(--letter-spacing-primary);
+}

@@ -1,0 +1,28 @@
+:root {
+  --font-family-primary: 'Montserrat', system-ui, sans-serif;
+  --letter-spacing-primary: 0.04em;
+  --font-size-primary: 16px;
+  --line-height-primary: 1.5;
+  --font-weight-primary: 400;
+  --font-weight-button: 500;
+  --text-color-primary: #2e2f42;
+  --text-color-secondary: #fff;
+  --body-background: #fff;
+  --global-border-radius: 8px;
+
+  --color-input-border: #808080;
+  --color-input-border-hover: #000;
+  --color-input-border-active: #4E75FF;
+  --color-input-border-disabled: #808080;
+  --border-width-input: 1px;
+  --padding-input: calc(.5rem - var(--border-width-input)) calc(1rem - var(--border-width-input));
+  --color-input-text: #2E2F42;
+  --color-input-text-active: #000;
+  --color-input-text-disabled: #808080;
+
+  --color-background-button: #4E75FF;
+  --color-background-button-hover: #6C8CFF;
+  --color-background-button-disabled: #CFCFCF;
+  --color-text-button: var(--text-color-secondary);
+  --color-text-button-disabled: #989898;
+}

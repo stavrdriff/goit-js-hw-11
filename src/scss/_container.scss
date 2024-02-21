@@ -1,0 +1,8 @@
+.container {
+  --container-padding: 1rem;
+
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  width: 100%;
+  max-width: calc(1128px + var(--container-padding) * 2);
+}
