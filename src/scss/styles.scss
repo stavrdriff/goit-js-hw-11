@@ -6,12 +6,8 @@
 @import './fonts';
 
 // libraries
-@import '../../node_modules/flatpickr/dist/flatpickr.min';
 @import '../../node_modules/izitoast/dist/css/iziToast.min';
 
 // components styles
 @import './section';
 @import './container';
-@import '../partials/navigation/scss/navigation';
-@import '../partials/timer/scss/timer';
-@import '../partials/snackbar/scss/snackbar';
