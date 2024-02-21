@@ -30,7 +30,7 @@ const clearGallery = () => {
   gallery.innerHTML = '';
 }
 
-export const markupGalery = (data) => {
+export const markupGallery = (data) => {
   const gallery = document.querySelector('.gallery');
 
   if (!gallery) {

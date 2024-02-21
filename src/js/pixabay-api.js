@@ -1,6 +1,6 @@
 import iziToast from "izitoast";
 import Error from '../img/octagone-x-mark.svg';
-import { markupGalery } from "./render-functions";
+import { markupGallery } from "./render-functions";
 
 
 export const fetchImages = (question) => {
@@ -19,7 +19,7 @@ export const fetchImages = (question) => {
       return response.json();
     })
     .then((data) => {
-      markupGalery(data);
+      markupGallery(data);
     })
     .catch((error) => iziToast.error({
       class: 'popup-message',
