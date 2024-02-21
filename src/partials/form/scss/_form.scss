@@ -1,0 +1,88 @@
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form {
+  margin: 0 auto;
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 371px;
+
+  &__label {
+    flex-grow: 1
+  }
+
+  &__input {
+    @include transition(border-color);
+
+    width: 100%;
+    padding: var(--padding-input);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-primary);
+    line-height:var(--line-height-primary);
+    color: var(--color-input-text);
+    border-width: var(--border-width-input);
+    border-style: solid;
+    border-color: var(--color-input-border);
+    border-radius: var(--global-border-radius);
+    outline: none;
+
+    &:hover {
+      --color-input-border: var(--color-input-border-hover);
+    }
+
+    &:focus {
+      --color-input-border: var(--color-input-border-active);
+      --color-input-text: var(--color-input-text-active)
+    }
+  }
+
+  &__submit {
+    @include transition;
+
+    --border-width-input: 0;
+
+    padding: var(--padding-input);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-primary);
+    line-height:var(--line-height-primary);
+    font-weight: var(--font-weight-button);
+    color: var(--color-text-button);
+    border: none;
+    border-radius: var(--global-border-radius);
+    background-color: var(--color-background-button);
+    transition-property: background-color, color;
+    outline: none;
+
+    @include event {
+      --color-background-button: var(--color-background-button-hover);
+    }
+  }
+}
+
+.timer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.value {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.popup-message {
+  border-radius: 4px;
+  overflow: hidden;
+}

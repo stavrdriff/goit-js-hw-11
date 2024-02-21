@@ -1890,7 +1890,7 @@ body {
 }
 
 .loader {
-  display: block;
+  margin: 1rem auto;
   font-size: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -1926,4 +1926,83 @@ body {
   87.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(0, 0, 0, 0.2), 1.8em -1.8em 0 0em rgba(0, 0, 0, 0.2), 2.5em 0em 0 0em rgba(0, 0, 0, 0.2), 1.75em 1.75em 0 0em rgba(0, 0, 0, 0.2), 0em 2.5em 0 0em rgba(0, 0, 0, 0.2), -1.8em 1.8em 0 0em rgba(0, 0, 0, 0.5), -2.6em 0em 0 0em rgba(0, 0, 0, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form {
+  margin: 0 auto;
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 371px;
+}
+.form__label {
+  flex-grow: 1;
+}
+.form__input {
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  padding: var(--padding-input);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-primary);
+  line-height: var(--line-height-primary);
+  color: var(--color-input-text);
+  border-width: var(--border-width-input);
+  border-style: solid;
+  border-color: var(--color-input-border);
+  border-radius: var(--global-border-radius);
+  outline: none;
+}
+.form__input:hover {
+  --color-input-border: var(--color-input-border-hover);
+}
+.form__input:focus {
+  --color-input-border: var(--color-input-border-active);
+  --color-input-text: var(--color-input-text-active) ;
+}
+.form__submit {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-width-input: 0;
+  padding: var(--padding-input);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-primary);
+  line-height: var(--line-height-primary);
+  font-weight: var(--font-weight-button);
+  color: var(--color-text-button);
+  border: none;
+  border-radius: var(--global-border-radius);
+  background-color: var(--color-background-button);
+  transition-property: background-color, color;
+  outline: none;
+}
+.form__submit:focus, .form__submit:hover {
+  --color-background-button: var(--color-background-button-hover);
+}
+
+.timer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.value {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.popup-message {
+  border-radius: 4px;
+  overflow: hidden;
 }/*# sourceMappingURL=styles.css.map */
