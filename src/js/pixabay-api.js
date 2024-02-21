@@ -30,7 +30,7 @@ export const fetchImages = (question) => {
       position: 'topRight',
       pauseOnHover: true,
       timeout: 3000,
-      message: `Sorry, there are no images matching your search query. Please, try again!`,
+      message: `${error}`,
     }));
 
 }

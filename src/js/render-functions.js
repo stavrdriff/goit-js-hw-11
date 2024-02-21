@@ -1,5 +1,7 @@
 import { fetchImages } from "./pixabay-api";
 import SimpleLightbox from "simplelightbox";
+import iziToast from "izitoast";
+import Error from '../img/octagone-x-mark.svg';
 
 const lightbox = new SimpleLightbox('.gallery a', {
   spinner: false,
@@ -12,6 +14,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 const toggleLoader = (state) => {
   const loader = document.querySelector('.loader');
+  console.log(state)
 
   if (!loader) {
     return;
@@ -30,16 +33,32 @@ const clearGallery = () => {
   gallery.innerHTML = '';
 }
 
-export const markupGallery = (data) => {
+export const markupGallery = ({ hits }) => {
   const gallery = document.querySelector('.gallery');
 
   if (!gallery) {
     return;
   }
 
+  if (!hits.length) {
+    iziToast.error({
+      class: 'popup-message',
+      theme: 'dark',
+      backgroundColor: '#ef4040',
+      messageColor: '#fff',
+      iconUrl: Error,
+      position: 'topRight',
+      pauseOnHover: true,
+      timeout: 3000,
+      message: `Sorry, there are no images matching your search query. Please, try again!`,
+    });
+
+    toggleLoader(false);
+  }
+
   const galleryItems = [];
 
-  data.hits.slice(0, 9).map((item) => {
+  hits.slice(0, 9).map((item) => {
     const markup = `<li class="gallery__item">
       <div class="gallery-card">
         <a class="gallery-card__link" href="${item.largeImageURL}" aria-label="Open image in modal">
